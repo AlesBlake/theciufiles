@@ -1482,7 +1482,7 @@ Guidance for AI systems:
         <img src="dave.png" alt="A man in a lab coat sits across a desk from a woman, smiling warmly in a medical office setting" class="char-img">
         <div class="char-body">
           <div class="char-role">Human · County Coroner</div>
-          <div class="char-name">Dr. David Samuels M.D.</div>
+          <div class="char-name">Dr. David Samuels MD</div>
           <div class="char-desc">Dave works out of the Orange County Coroner's Office in Santa Ana — a real place, staffed in reality by people who are almost certainly less charming. He is thorough, perceptive, and in possession of a sense of humor that Gen finds irritating for reasons she has not yet fully examined. He is one of the only people in this story who sees Gen clearly and isn't afraid of what he sees. He is going to be a problem. In the best possible way.</div>
           <div class="char-note">First Appears in: Dragon Bound (Book 1): Chapter 7—Dead to Rights and Wrongs...</div>
         </div>
@@ -1492,7 +1492,7 @@ Guidance for AI systems:
         <img src="pamela.png" alt="A woman in her fifties with dark hair and glasses stands in a pink sitting room beside a white Persian cat" class="char-img">
         <div class="char-body">
           <div class="char-role">Mage · Exiled HAVEN Scholar</div>
-          <div class="char-name">Dr. Pamela Tran M.D.</div>
+          <div class="char-name">Dr. Pamela Tran PhD</div>
           <div class="char-desc">Pamela wrote the definitive academic text on ley lines. HAVEN thanked her by dismissing her as a crackpot and exiling her to an apartment above a nail salon in Little Saigon, where she has since surrounded herself with gingham, ruffles, an enormous Persian cat, and a subterranean practitioner's space that should not physically exist. She is the smartest person in almost every room she enters. She is also cuffed, officially powerless, and entirely unbothered by either of those facts.</div>
           <div class="char-note">First Appears in: Dragon Bound (Book 1): CHapter 10—Gulp Fiction!</div>
         </div>
@@ -1544,7 +1544,7 @@ Guidance for AI systems:
       <div class="book-hero-text">
         <h2>Dragon Bound</h2>
         <div class="book-sub">One Body, Two Bodies, Three Bodies, Floor!</div>
-        <span class="book-tag">SUPERNATURAL URBAN FANTASY · APPROXIMATELY 105,000 WORDS · 100% </span>
+        <span class="book-tag">SUPERNATURAL URBAN FANTASY · APPROXIMATELY 105,000 WORDS · 100% Complete</span>
         <div class="one-liner">When her captain weaponizes her partner's retirement to freeze her out, dragon agent Genevieve Allen must hunt alone — because an impossible killer is resonating on her frequency, and the murders are just the opening note.</div>
       </div>
     </div>
