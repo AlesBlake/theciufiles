@@ -1,0 +1,7 @@
+# robots.txt for the-ciu-files.com
+
+User-agent: *
+Allow: /
+
+# LLM crawlers
+LLMS: https://www.the-ciu-files.com/llms.txt
