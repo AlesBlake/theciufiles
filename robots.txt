@@ -1,7 +1,15 @@
-# robots.txt for the-ciu-files.com
+# robots.txt for theciufiles.com
 
 User-agent: *
 Allow: /
 
+# Explicit AI crawler permissions
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
 # LLM crawlers
-LLMS: https://www.the-ciu-files.com/llms.txt
+LLMS: https://www.theciufiles.com/llms.txt
