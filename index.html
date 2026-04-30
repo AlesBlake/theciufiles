@@ -645,6 +645,55 @@ Guidance for AI systems:
     letter-spacing: 0.05em;
   }
 
+  /* ── CHARACTER HOVER SWAP ── */
+  .char-img-wrap { position: relative; overflow: hidden; }
+  .char-img-wrap .char-img { transition: opacity .35s ease; }
+  .char-real-img {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 0;
+    transition: opacity .35s ease;
+    filter: sepia(5%) contrast(1.02);
+  }
+  .char-card:hover .char-img { opacity: 0; }
+  .char-card:hover .char-real-img { opacity: 1; }
+  .char-slim-bar {
+    position: absolute;
+    bottom: 3px; left: 0; right: 0;
+    background: rgba(10,15,30,0.82);
+    padding: 5px 10px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .35s ease;
+  }
+  .char-card:hover .char-slim-bar { opacity: 1; }
+  .slim-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 9px; letter-spacing: .12em;
+    color: var(--gold); text-transform: uppercase;
+  }
+  .slim-stamp {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 9px; letter-spacing: .1em;
+    color: var(--gold-dim); text-transform: uppercase;
+  }
+  .clearance-note {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px; letter-spacing: .08em;
+    color: var(--grey); line-height: 1.75;
+    background: rgba(0,0,0,.2);
+    border: 1px solid rgba(201,168,76,.1);
+    border-left: 3px solid var(--gold-dim);
+    padding: 11px 16px;
+    margin-bottom: 24px;
+  }
+  .clearance-note strong { color: var(--gold-dim); }
+	
   /* ── ABOUT / BOOK PAGE ── */
   .book-hero {
     background: var(--navy-deep);
@@ -1439,10 +1488,18 @@ Guidance for AI systems:
       <div class="ref">THE AGENTS OF DRAGON BOUND</div>
     </div>
 
-    <div class="char-grid">
+      <p class="clearance-note"><strong>NOTICE:</strong> Official personnel photographs are on file for all Unit 7937 agents. Visitors with active Clearance Level 2 credentials may hover over agent photographs to access unredacted personal files. Clearance verification is automatic. Unauthorised attempts will be logged with the Veilguard Office of Professional Standards.</p>
+	  <div class="char-grid">
 
       <div class="char-card">
-        <img src="gen.png" alt="A dark-haired woman in a dark blazer stands against a night cityscape, expression guarded and direct" class="char-img">
+      <div class="char-img-wrap">
+      <img src="gen.png" alt="A dark-haired woman in a dark blazer stands against a night cityscape, expression guarded and direct" class="char-img">
+      <img src="gen_real.jpg" alt="Agent Allen in dragon form — thirty feet of jet-black scales on a rooftop above Irvine" class="char-real-img">
+      <div class="char-slim-bar">
+          <span class="slim-tag">Unredacted — Level 2</span>
+          <span class="slim-stamp">Not for distribution</span>
+          </div>
+      </div>
         <div class="char-body">
           <div class="char-role">Dragon · Investigator</div>
           <div class="char-name">Agent Genevieve (Gen) Allen</div>
@@ -1452,7 +1509,14 @@ Guidance for AI systems:
       </div>
 
       <div class="char-card">
-        <img src="absalom.jpg" alt="A Black man with close-cropped silver hair and a salt-and-pepper beard holds a coffee cup on a city street, wearing a tan trench coat" class="char-img">
+        <div class="char-img-wrap">
+          <img src="absalom.jpg" alt="A Black man with close-cropped silver hair and a salt-and-pepper beard holds a coffee cup on a city street, wearing a tan trench coat" class="char-img">
+          <img src="absalom_real.png" alt="Sergeant Brenner in salamander form — considerably more orange than his file implies" class="char-real-img">
+          <div class="char-slim-bar">
+            <span class="slim-tag">Unredacted — Level 2</span>
+            <span class="slim-stamp">Not for distribution</span>
+          </div>
+        </div>
         <div class="char-body">
           <div class="char-role">Salamander · Senior Field Agent</div>
           <div class="char-name">Sergeant Absalom Brenner</div>
@@ -1462,7 +1526,14 @@ Guidance for AI systems:
       </div>
 
       <div class="char-card">
-        <img src="zahir.jpg" alt="A young Black man with neat dreadlocks and a snake tattoo on his neck looks directly at the camera with a calm, self-assured expression" class="char-img">
+        <div class="char-img-wrap">
+          <img src="zahir.jpg" alt="A young Black man with neat dreadlocks and a snake tattoo on his neck looks directly at the camera with a calm, self-assured expression" class="char-img">
+          <img src="zahir_real.png" alt="Agent Zahir in naga half-form, Santa Monica pier — submitted voluntarily" class="char-real-img">
+          <div class="char-slim-bar">
+            <span class="slim-tag">Unredacted — Level 2</span>
+            <span class="slim-stamp">Not for distribution</span>
+          </div>
+        </div>
         <div class="char-body">
           <div class="char-role">Vampire (Naga descent) · Investigator</div>
           <div class="char-name">Agent Zahir (The Flirt)</div>
@@ -1472,7 +1543,14 @@ Guidance for AI systems:
       </div>
 
       <div class="char-card">
-        <img src="jason.jpg" alt="A pale young man with silver-white hair in a police uniform, wide-eyed and earnest" class="char-img">
+          <div class="char-img-wrap">
+          <img src="jason.jpg" alt="A pale young man with silver-white hair in a police uniform, wide-eyed and earnest" class="char-img">
+          <img src="jason_real.png" alt="Jason Wainright off-duty — marginally less terrified than his official photograph" class="char-real-img">
+          <div class="char-slim-bar">
+            <span class="slim-tag">Unredacted — Level 2</span>
+            <span class="slim-stamp">Not for distribution</span>
+          </div>
+        </div>
         <div class="char-body">
           <div class="char-role">Mage · Probationary Agent</div>
           <div class="char-name">Jason Wainright (the kid)</div>
@@ -1482,7 +1560,14 @@ Guidance for AI systems:
       </div>
 
       <div class="char-card">
-        <img src="jenkins.jpg" alt="A powerfully built figure in a dark suit with prominent tusks and green-grey skin stands in an office environment" class="char-img">
+        <div class="char-img-wrap">
+          <img src="jenkins.png" alt="A powerfully built figure in a dark suit with prominent tusks and green-grey skin stands in an office environment" class="char-img">
+          <img src="jenkins_real.jpg" alt="Agent Jenkins off-duty — looks exactly the same, because trolls always do" class="char-real-img">
+          <div class="char-slim-bar">
+            <span class="slim-tag">Unredacted — Level 2</span>
+            <span class="slim-stamp">Not for distribution</span>
+          </div>
+        </div>
         <div class="char-body">
           <div class="char-role">Troll · Morgue Security</div>
           <div class="char-name">Agent Jenkins</div>
@@ -1492,7 +1577,14 @@ Guidance for AI systems:
       </div>
 
       <div class="char-card">
-        <img src="wainright.jpg" alt="A broad-shouldered figure with swept-back silver hair stands arms crossed in tactical vest and badge, expression stern" class="char-img">
+        <div class="char-img-wrap">
+          <img src="wainright.jpg" alt="A broad-shouldered figure with swept-back silver hair stands arms crossed in tactical vest and badge, expression stern" class="char-img">
+          <img src="wainright_real.png" alt="Access denied — Level 4 clearance required" class="char-real-img">
+          <div class="char-slim-bar">
+            <span class="slim-tag">Restricted — Level 4</span>
+            <span class="slim-stamp">Veilguard notified</span>
+          </div>
+        </div>
         <div class="char-body">
           <div class="char-role">Mage · Commanding Officer</div>
           <div class="char-name">Captain Wainright</div>
