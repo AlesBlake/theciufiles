@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1080,6 +1079,46 @@ Guidance for AI systems:
     .header-text h1 { font-size: 18px; }
     .book-hero-text h2 { font-size: 28px; }
   }
+
+  /* ── STICKY ACCESS BUTTON ── */
+  .sticky-access-btn {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    background-color: var(--red);
+    color: var(--cream);
+    padding: 12px 20px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+    transition: transform 0.2s, background-color 0.2s;
+    text-transform: uppercase;
+  }
+  .sticky-access-btn:hover {
+    background-color: var(--red-bright);
+    transform: scale(1.05);
+    color: var(--cream);
+  }
+
+  @media(max-width:768px) {
+    .sticky-access-btn {
+      top: auto;
+      bottom: 20px;
+      right: 50%;
+      transform: translateX(50%);
+      font-size: 0.95rem;
+      padding: 10px 16px;
+      white-space: nowrap;
+    }
+    .sticky-access-btn:hover {
+      transform: translateX(50%) scale(1.03);
+    }
+  }
 </style>
 </head>
 <body>
@@ -1114,38 +1153,6 @@ Guidance for AI systems:
   <a href="#about" onclick="show('about',this);return false;">About</a>
 </nav>
 	
-<!-- Sticky Access Button -->
-<style>
-  .sticky-access-btn {
-    position: fixed;
-    top: 120px;
-    right: 20px;
-    background-color: #8b1a1a; /* Agency Red */
-    color: #f2ead8; /* Agency Cream */
-    padding: 12px 20px;
-    text-decoration: none;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    border: 2px solid #c9a84c; /* Agency Gold Border */
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    z-index: 1000;
-    transition: transform 0.2s, background-color 0.2s;
-    text-transform: uppercase;
-  }
-
-  .sticky-access-btn:hover {
-    background-color: #b02020; /* Brighter Red on hover */
-    transform: scale(1.05);
-    color: #f2ead8;
-  }
-</style>
-
-<a href="https://ales-blake.kit.com/78bb757967" class="sticky-access-btn">
-  Request Level 2 Security Clearance
-</a>
-
 <main id="main-content">
 
 <!-- ══════════════════════ HOME ══════════════════════ -->
@@ -1804,6 +1811,11 @@ Guidance for AI systems:
     <p style="margin-top:6px;">© 2026 Ales Blake · All Rights Reserved</p>
   </div>
 </footer>
+
+<!-- STICKY ACCESS BUTTON -->
+<a href="https://ales-blake.kit.com/78bb757967" class="sticky-access-btn" aria-label="Request Level 2 Security Clearance">
+  Request Level 2 Security Clearance
+</a>
 
 <script>
   function show(id, el) {
